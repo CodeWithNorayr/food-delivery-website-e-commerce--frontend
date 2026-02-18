@@ -7,7 +7,7 @@ import { StoreContext } from '../../context/StoreContext'
 const LoginPopUp = ({ setShowLoginPopUp }) => {
   const { setToken } = useContext(StoreContext)
   const [currState, setCurrState] = useState('Sign up')
-  const backendURL = 'http://localhost:4000'
+  const backendURL = 'https://food-delivery-website-e-commerce-backend.onrender.com'
 
   const [data, setData] = useState({
     name: '',
@@ -25,8 +25,8 @@ const LoginPopUp = ({ setShowLoginPopUp }) => {
     try {
       const url =
         currState === 'Sign up'
-          ? `http://localhost:4000/api/user/registration`
-          : `http://localhost:4000/api/user/login`
+          ? `https://food-delivery-website-e-commerce-backend.onrender.com/api/user/registration`
+          : `https://food-delivery-website-e-commerce-backend.onrender.com/api/user/login`
 
       const response = await axios.post(url, data)
 
