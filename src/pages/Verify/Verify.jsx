@@ -13,11 +13,11 @@ const Verify = () => {
 
   useEffect(() => {
     const verify = async () => {
-      if (success && orderId) {
+      if (success === "true" && orderId) {
         try {
           const response = await axios.post(`${backendURL}/api/order/verify`, { success, orderId });
           if (response.data.success) {
-            navigate('/userorders');
+            navigate('/userorders'); // ✅ Navigate after successful verification
           } else {
             navigate('/');
           }
