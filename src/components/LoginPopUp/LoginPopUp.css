@@ -1,0 +1,208 @@
+/* ============================
+   LOGIN MODAL CONTAINER
+============================ */
+.login-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 450px;
+  max-width: 90%;
+  padding: 30px 25px;
+
+  background: white;
+  border-radius: 18px;
+
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  font-family: "Segoe UI", sans-serif;
+  color: rgb(34, 34, 93);
+  z-index: 1000;
+}
+
+/* ============================
+   LOGIN HEADER
+============================ */
+.login-topic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-topic h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.login-section .login-x {
+  width: 28px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-section .login-x:hover {
+  transform: scale(1.15);
+}
+
+/* ============================
+   INPUT GROUPS
+============================ */
+.name,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  font-size: 15px;
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.input:focus {
+  border-color: rgb(104, 104, 224);
+  box-shadow: 0px 0px 6px rgba(104, 104, 224, 0.4);
+}
+
+/* ============================
+   CHECKBOX SECTION
+============================ */
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 14px;
+  color: #444;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+/* ============================
+   LOGIN BUTTON
+============================ */
+.login-btn button {
+  width: 100%;
+  height: 45px;
+
+  background: rgb(104, 104, 224);
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.login-btn button:hover {
+  background: rgb(40, 40, 72);
+  transform: translateY(-2px);
+}
+
+/* ============================
+   FOOTER TEXT
+============================ */
+.span-login {
+  text-align: center;
+  font-size: 14px;
+  color: gray;
+}
+
+.span-login span {
+  color: rgb(104, 104, 224);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.span-login span:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+   RESPONSIVE (Mobile & Tablets)
+============================ */
+
+/* Small screens: phones portrait */
+@media (max-width: 500px) {
+  .login-section {
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .login-topic h2 {
+    font-size: 20px;
+  }
+
+  .input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .login-btn button {
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .span-login {
+    font-size: 13px;
+  }
+}
+
+/* Tablets and landscape phones */
+@media (min-width: 501px) and (max-width: 768px) {
+  .login-section {
+    width: 400px;
+    padding: 25px;
+    gap: 22px;
+  }
+
+  .login-topic h2 {
+    font-size: 21px;
+  }
+
+  .input {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .login-btn button {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .span-login {
+    font-size: 14px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+  .login-section {
+    width: 450px;
+    padding: 30px 25px;
+    gap: 25px;
+  }
+}

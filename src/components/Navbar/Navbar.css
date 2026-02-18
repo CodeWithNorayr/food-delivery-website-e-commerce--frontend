@@ -1,0 +1,212 @@
+/* ============================
+   NAVBAR CONTAINER
+============================ */
+.navbar-section {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #f7f7fc; /* Optional light background */
+  position: relative;
+  z-index: 50;
+}
+
+/* ============================
+   LOGO
+============================ */
+.restaurant {
+  cursor: pointer;
+  color: rgb(8, 8, 61);
+  font-family: sans-serif;
+  font-weight: 900;
+  box-shadow: 0px 0px 2px 2px rgb(37, 37, 90);
+  padding: 5px;
+  font-size: 24px;
+  transition: 0.2s ease;
+}
+
+.restaurant:hover {
+  color: rgb(48, 48, 113);
+  transform: scale(1.05);
+}
+
+/* ============================
+   NAV LINKS
+============================ */
+.navbar-content-ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-content-ul li {
+  list-style: none;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgb(202, 202, 217);
+  padding: 8px 12px;
+  background-color: rgb(194, 194, 223);
+  border-radius: 6px;
+  box-shadow: 0px 0px 1px 1px blue;
+  transition: 0.2s ease;
+}
+
+.navbar-content-ul li:hover {
+  background-color: rgb(160, 160, 200);
+  color: #fff;
+}
+
+/* ============================
+   RIGHT SECTION (Cart + Auth)
+============================ */
+.navbar-right-sec {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Cart image */
+.navbar-right-sec img {
+  height: 60px;
+  width: 90px;
+  border: 1px solid rgb(41, 41, 109);
+  border-radius: 20px;
+  object-fit: cover;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.navbar-right-sec img:hover {
+  height: 72px;
+  width: 97px;
+}
+
+/* Auth buttons / signup */
+.navbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80px;
+  height: 50px;
+  box-shadow: 0px 0px 1px 1px rgb(22, 5, 57);
+  cursor: pointer;
+  color: rgb(4, 4, 81);
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.navbar-btn:hover {
+  background-color: rgb(194, 194, 223);
+  color: rgb(0, 0, 60);
+}
+
+/* Dropdown / btn-sect */
+.btn-sect {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  right: 0; /* auto-align to parent */
+  top: 60px; /* below the navbar-btn */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+  min-width: 120px;
+  flex-direction: column;
+}
+
+.div-userorders-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ============================
+   MEDIA QUERIES (RESPONSIVE)
+============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .navbar-content-ul {
+    gap: 10px;
+  }
+
+  .navbar-right-sec {
+    gap: 10px;
+  }
+
+  .navbar-right-sec img {
+    height: 50px;
+    width: 75px;
+  }
+
+  .navbar-btn {
+    width: 70px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar-content-ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .navbar-content-ul li {
+    width: 100%;
+  }
+
+  .navbar-right-sec {
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar-right-sec img {
+    height: 45px;
+    width: 65px;
+  }
+
+  .navbar-btn {
+    width: 60px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .btn-sect {
+    top: 50px;
+    right: 0;
+    width: 90%;
+  }
+}
+
+

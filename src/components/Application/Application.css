@@ -1,0 +1,12 @@
+.div-tag{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.div-tag .h1-tag{
+  color: rgb(50, 50, 96);
+}

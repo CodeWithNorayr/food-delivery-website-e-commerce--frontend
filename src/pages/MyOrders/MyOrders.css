@@ -1,0 +1,153 @@
+/* ============================
+   MY ORDERS
+============================ */
+
+.my-orders {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* ============================
+   ORDER CARD
+============================ */
+.order-card {
+  box-shadow: 0px 0px 4px 2px rgb(15, 8, 90);
+  padding: 15px;
+  background-color: rgb(235, 235, 243);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================
+   ORDER ITEM SECTIONS
+============================ */
+.order-info-total-amount,
+.order-items-name,
+.order-items-price,
+.order-items-category,
+.order-items-description,
+.order-info-status,
+.my-orders-h2 {
+  color: antiquewhite;
+  background-color: rgb(1, 1, 12);
+  box-shadow: 0px 0px 2px 2px rgb(43, 43, 210);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  transition: 0.3s ease;
+  word-wrap: break-word;
+}
+
+.order-info-total-amount:hover,
+.order-items-name:hover,
+.order-items-price:hover,
+.order-items-category:hover,
+.order-items-description:hover,
+.order-info-status:hover,
+.my-orders-h2:hover {
+  background-color: rgb(4, 4, 61);
+}
+
+/* ============================
+   FLEX WRAPPING FOR ORDER ITEMS
+============================ */
+.order-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .my-orders {
+    font-size: 18px;
+    gap: 15px;
+    padding: 8px;
+  }
+
+  .order-card {
+    padding: 12px;
+  }
+
+  .order-info-total-amount,
+  .order-items-name,
+  .order-items-price,
+  .order-items-category,
+  .order-items-description,
+  .order-info-status,
+  .my-orders-h2 {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .my-orders {
+    font-size: 16px;
+    gap: 12px;
+    padding: 6px;
+  }
+
+  .order-card {
+    padding: 10px;
+  }
+
+  .order-info-total-amount,
+  .order-items-name,
+  .order-items-price,
+  .order-items-category,
+  .order-items-description,
+  .order-info-status,
+  .my-orders-h2 {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .order-card > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .my-orders {
+    font-size: 14px;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .order-card {
+    padding: 8px;
+  }
+
+  .order-info-total-amount,
+  .order-items-name,
+  .order-items-price,
+  .order-items-category,
+  .order-items-description,
+  .order-info-status,
+  .my-orders-h2 {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}

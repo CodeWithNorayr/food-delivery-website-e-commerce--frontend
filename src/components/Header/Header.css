@@ -1,0 +1,48 @@
+/* ============================
+   HEADER IMAGE CONTAINER
+============================ */
+.assets-delivery-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 2px 2px rgb(2, 2, 41);
+  padding: 8px;
+  background-color: rgb(239, 240, 243);
+  
+  /* Desktop default size */
+  width: 100%;
+  max-width: 1160px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .assets-delivery-image {
+    height: 400px;
+    padding: 6px;
+  }
+}
+
+/* Large mobile devices */
+@media (max-width: 768px) {
+  .assets-delivery-image {
+    height: 320px;
+    padding: 5px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .assets-delivery-image {
+    height: 240px;
+    padding: 4px;
+  }
+}

@@ -1,0 +1,141 @@
+/* ============================
+   MENU SECTION
+============================ */
+.menu-section {
+  display: flex;
+  flex-wrap: wrap; /* Desktop can wrap */
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: rgb(56, 56, 186);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  gap: 20px;
+  overflow-x: visible; /* default */
+}
+
+.menu-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(58, 58, 169);
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* ============================
+   MENU ITEMS IMAGES
+============================ */
+.menu-section .menu-items img {
+  height: 60px;
+  width: 90px;
+  border: 1px solid blue;
+  border-radius: 20px;
+  transition: 0.2s ease;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.menu-section .menu-items img:hover {
+  height: 70px;
+  width: 100px;
+  border: 2px solid blue;
+  border-radius: 22px;
+}
+
+.image {
+  height: 100px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* Tablets: Horizontal Scroll */
+@media (max-width: 1024px) {
+  .menu-section {
+    flex-wrap: nowrap;       /* no wrap, scroll horizontally */
+    overflow-x: auto;        /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    gap: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+  }
+
+  .menu-section .menu-items img {
+    height: 55px;
+    width: 80px;
+  }
+
+  .menu-section .menu-items img:hover {
+    height: 65px;
+    width: 90px;
+  }
+
+  .menu-h1 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile Landscape: Horizontal Scroll */
+@media (max-width: 768px) {
+  .menu-section {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .menu-section .menu-items img {
+    height: 50px;
+    width: 75px;
+  }
+
+  .menu-section .menu-items img:hover {
+    height: 60px;
+    width: 85px;
+  }
+
+  .menu-h1 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile Portrait: Horizontal Scroll */
+@media (max-width: 480px) {
+  .menu-section {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    padding: 0 5px;
+    font-size: 14px;
+  }
+
+  .menu-section .menu-items img {
+    height: 45px;
+    width: 65px;
+  }
+
+  .menu-section .menu-items img:hover {
+    height: 50px;
+    width: 70px;
+  }
+
+  .menu-h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

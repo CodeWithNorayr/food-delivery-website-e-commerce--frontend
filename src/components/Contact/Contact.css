@@ -1,0 +1,221 @@
+/* ============================
+   CONTACT SECTION
+============================ */
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 40px 10px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: #f9f9ff;
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+.contact-section img {
+  height: 120px;
+  width: 120px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 2px rgba(46, 4, 4, 0.6);
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0px 0px 8px 3px red;
+}
+
+/* ============================
+   HEADINGS
+============================ */
+.h3-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 0 20px 0;
+  color: rgb(57, 57, 126);
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   POLICY SECTION
+============================ */
+.policy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(57, 57, 126);
+  line-height: 1.6;
+  gap: 12px;
+}
+
+.policy-section p {
+  cursor: pointer;
+  color: rgb(57, 57, 126);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.policy-section p:hover {
+  color: #e63946;
+}
+
+/* ============================
+   DETAILS SECTION
+============================ */
+.details-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(67, 63, 63);
+  line-height: 1.6;
+  gap: 8px;
+}
+
+.details-section h1 {
+  cursor: pointer;
+  color: rgb(57, 57, 126);
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.details-section h1:hover {
+  color: #e63946;
+}
+
+/* ============================
+   ICON SECTION
+============================ */
+.icon-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.icon-section img {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.icon-section img:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0px 0px 6px 2px #e63946;
+}
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 25px;
+  }
+
+  .h3-tag {
+    font-size: 28px;
+  }
+
+  .policy-section {
+    font-size: 18px;
+  }
+
+  .details-section {
+    font-size: 15px;
+  }
+
+  .icon-section {
+    gap: 18px;
+  }
+
+  .contact-section img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 15px 20px;
+    gap: 20px;
+  }
+
+  .h3-tag {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .policy-section {
+    font-size: 16px;
+  }
+
+  .details-section {
+    font-size: 14px;
+  }
+
+  .icon-section {
+    gap: 15px;
+  }
+
+  .contact-section img {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .h3-tag {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .policy-section {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .details-section {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .icon-section {
+    gap: 12px;
+  }
+
+  .contact-section img {
+    height: 75px;
+    width: 75px;
+  }
+}

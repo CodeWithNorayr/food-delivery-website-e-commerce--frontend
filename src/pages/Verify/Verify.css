@@ -1,0 +1,63 @@
+/* ============================
+   VERIFY SECTION
+============================ */
+.verify {
+  min-height: 60vh; /* can be adjusted for smaller screens */
+  display: grid;
+  place-items: center; /* centers content both vertically and horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* SPINNER */
+.verify .spinner {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #ccc; /* light border for better look */
+  border-top-color: tomato; /* colored part */
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+  place-self: center;
+}
+
+/* ROTATE ANIMATION */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================
+   RESPONSIVE MEDIA QUERIES
+============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .verify .spinner {
+    width: 80px;
+    height: 80px;
+    border-width: 4px;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .verify .spinner {
+    width: 70px;
+    height: 70px;
+    border-width: 4px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .verify {
+    min-height: 50vh; /* slightly smaller to fit mobile screens */
+  }
+
+  .verify .spinner {
+    width: 60px;
+    height: 60px;
+    border-width: 3px;
+  }
+}
