@@ -5,7 +5,7 @@ import axios from "axios";
 import { StoreContext } from '../../context/StoreContext';
 
 const Verify = () => {
-  const {backendURL,token} = useContext(StoreContext)
+  const {backendURL} = useContext(StoreContext)
   const [searchParams] = useSearchParams();
   const success = searchParams.get("success");
   const orderId = searchParams.get("orderId");
@@ -14,9 +14,6 @@ const Verify = () => {
   const verifyPayment = async () => {
     try {
       const response = await axios.post(`${backendURL}/api/order/verify`, { success, orderId }, {
-        headers: {
-          token: token,
-        }
       });
       if (response.data.success) {
         navigate('/userorders');
