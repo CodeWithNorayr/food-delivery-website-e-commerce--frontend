@@ -5,7 +5,7 @@ import axios from "axios";
 import { StoreContext } from '../../context/StoreContext';
 
 const Verify = () => {
-  const {backendURL} = useContext(StoreContext)
+  const { backendURL } = useContext(StoreContext);
   const [searchParams] = useSearchParams();
   const success = searchParams.get("success");
   const orderId = searchParams.get("orderId");
@@ -21,18 +21,22 @@ const Verify = () => {
         navigate('/');
       }
     } catch (error) {
-      console.error(error);
+      console.error("Payment verification error:", error);
       navigate('/');
     }
   };
 
   useEffect(() => {
-    if (success && orderId) {
-      verifyPayment();
-    } else {
-      navigate('/');
-    }
-  }, [success,orderId]);
+    const runVerification = async () => {
+      if (success && orderId) {
+        await verifyPayment();
+      } else {
+        navigate('/');
+      }
+    };
+
+    runVerification();
+  }, [success, orderId, navigate]); // include navigate to satisfy linter
 
   return (
     <div className='verify'>
