@@ -64,16 +64,18 @@
 /* Mobile portrait with horizontal scroll */
 @media (max-width: 480px) {
   .display-food {
-    display: flex;
-    flex-wrap: nowrap;
+    display: flex;          /* use flex for horizontal scroll */
+    flex-wrap: nowrap;      /* prevent items from wrapping */
     overflow-x: auto;
-    padding: 10px;
+    -webkit-overflow-scrolling: touch;
     gap: 10px;
+    padding: 0 5px;
+    font-size: 14px;
   }
 
   .display-food img {
     height: 140px;
     width: 140px;
-    flex: 0 0 auto; /* prevents shrinking in flex scroll */
+    flex: 0 0 auto; /* ensures images don’t shrink */
   }
 }
