@@ -2,15 +2,9 @@
    ORDER FORM
 ============================ */
 
-.order-container {
-  max-width: 600px; /* constrain form width */
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
 .order-title {
   display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
   font-family: sans-serif;
@@ -20,7 +14,6 @@
   margin-bottom: 20px;
 }
 
-/* Inputs and Labels */
 .firstname,
 .lastname,
 .emailing,
@@ -34,22 +27,21 @@
 .order-fee,
 .order-charge {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* allows wrapping on small screens */
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
 }
 
-.firstname p,
-.lastname p,
-.emailing p,
-.streetcode p,
-.zipcode p,
-.state p,
-.city p,
-.country p,
-.phone p,
+.firstname .name-tag,
+.lastname .lastname-tag,
+.emailing .email-tag,
+.streetcode .streetcode-tag,
+.zipcode .zipcode-tag,
+.state .state-tag,
+.city .city-tag,
+.country .country-tag,
+.phone .phone-tag,
 .order-price .order-price-tag,
 .order-price .order-price-p-tag,
 .order-fee .order-price-tag,
@@ -60,23 +52,29 @@
   font-weight: 900;
   font-size: 16px;
   color: rgb(42, 42, 138);
-  min-width: 120px; /* ensure labels have some width */
+  min-width: 100px; /* ensures label doesn't shrink too much */
 }
 
-input {
+.firstname .name-input,
+.lastname .lastname-input,
+.emailing .email-input,
+.streetcode .streetcode-input,
+.zipcode .zipcode-input,
+.state .state-input,
+.city .city-input,
+.country .country-input,
+.phone .phone-input {
   padding: 6px;
-  width: 100%;
-  max-width: 300px;
+  width: 100%; /* make inputs flexible */
+  max-width: 300px; /* keeps them from being too wide on desktop */
   font-family: sans-serif;
   font-weight: 900;
   font-size: 16px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 6px;
 }
 
-/* Submit Button */
-.btn-submit button {
+/* SUBMIT BUTTON */
+.btn-submit .btn-submit {
   width: 100%;
   max-width: 300px;
   height: 40px;
@@ -92,7 +90,7 @@ input {
   border-radius: 8px;
 }
 
-.btn-submit button:hover {
+.btn-submit .btn-submit:hover {
   background-color: rgb(65, 65, 117);
 }
 
@@ -102,30 +100,116 @@ input {
 
 /* Tablets */
 @media (max-width: 1024px) {
-  .order-title { font-size: 20px; }
-  input { max-width: 250px; font-size: 15px; }
-  .firstname, .lastname, .emailing, .streetcode, .zipcode, 
-  .state, .city, .country, .phone, .order-price, .order-fee, 
-  .order-charge { gap: 10px; }
+  .order-title {
+    font-size: 20px;
+  }
+
+  .firstname,
+  .lastname,
+  .emailing,
+  .streetcode,
+  .zipcode,
+  .state,
+  .city,
+  .country,
+  .phone,
+  .order-price,
+  .order-fee,
+  .order-charge {
+    gap: 10px;
+  }
+
+  .firstname .name-input,
+  .lastname .lastname-input,
+  .emailing .email-input,
+  .streetcode .streetcode-input,
+  .zipcode .zipcode-input,
+  .state .state-input,
+  .city .city-input,
+  .country .country-input,
+  .phone .phone-input {
+    max-width: 250px;
+    font-size: 15px;
+  }
 }
 
 /* Mobile Landscape */
 @media (max-width: 768px) {
-  .order-title { font-size: 18px; }
-  .firstname, .lastname, .emailing, .streetcode, .zipcode, 
-  .state, .city, .country, .phone, .order-price, .order-fee, 
-  .order-charge { flex-direction: column; align-items: flex-start; gap: 8px; }
-  input { max-width: 100%; font-size: 15px; }
+  .order-title {
+    font-size: 18px;
+  }
+
+  .firstname,
+  .lastname,
+  .emailing,
+  .streetcode,
+  .zipcode,
+  .state,
+  .city,
+  .country,
+  .phone,
+  .order-price,
+  .order-fee,
+  .order-charge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .firstname .name-input,
+  .lastname .lastname-input,
+  .emailing .email-input,
+  .streetcode .streetcode-input,
+  .zipcode .zipcode-input,
+  .state .state-input,
+  .city .city-input,
+  .country .country-input,
+  .phone .phone-input {
+    width: 100%;
+    max-width: none;
+    font-size: 15px;
+  }
 }
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
-  .order-title { font-size: 16px; }
-  p, .order-price .order-price-tag, .order-price .order-price-p-tag,
-  .order-fee .order-price-tag, .order-fee .order-price-p-tag,
-  .order-charge .order-price-tag, .order-charge .order-price-p-tag {
+  .order-title {
+    font-size: 16px;
+  }
+
+  .firstname .name-tag,
+  .lastname .lastname-tag,
+  .emailing .email-tag,
+  .streetcode .streetcode-tag,
+  .zipcode .zipcode-tag,
+  .state .state-tag,
+  .city .city-tag,
+  .country .country-tag,
+  .phone .phone-tag,
+  .order-price .order-price-tag,
+  .order-price .order-price-p-tag,
+  .order-fee .order-price-tag,
+  .order-fee .order-price-p-tag,
+  .order-charge .order-price-tag,
+  .order-charge .order-price-p-tag {
     font-size: 14px;
   }
-  input { font-size: 14px; padding: 5px; }
-  .btn-submit button { font-size: 14px; height: 38px; }
+
+  .firstname .name-input,
+  .lastname .lastname-input,
+  .emailing .email-input,
+  .streetcode .streetcode-input,
+  .zipcode .zipcode-input,
+  .state .state-input,
+  .city .city-input,
+  .country .country-input,
+  .phone .phone-input {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .btn-submit .btn-submit {
+    font-size: 14px;
+    height: 38px;
+  }
 }
