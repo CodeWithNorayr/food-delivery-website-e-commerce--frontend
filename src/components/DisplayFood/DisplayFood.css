@@ -64,18 +64,18 @@
 /* Mobile portrait with horizontal scroll */
 @media (max-width: 480px) {
   .display-food {
-    display: flex;          /* use flex for horizontal scroll */
-    flex-wrap: nowrap;      /* prevent items from wrapping */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    display: flex;            /* switch to flex for horizontal scroll */
+    flex-wrap: nowrap;        /* prevent wrapping */
+    overflow-x: auto;         /* enable horizontal scroll */
+    scroll-behavior: smooth;  /* smooth scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
     gap: 10px;
-    padding: 0 5px;
-    font-size: 14px;
+    padding: 0 10px;
   }
 
   .display-food img {
     height: 140px;
     width: 140px;
-    flex: 0 0 auto; /* ensures images don’t shrink */
+    flex: 0 0 auto; /* keep images fixed size and prevent shrinking */
   }
 }
