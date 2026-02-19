@@ -1,7 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  plugins: [react()],
-  base: './', // important for Render
+  plugins: [
+    react(),
+    viteStaticCopy({
+      targets: [
+        { src: 'public/_redirects', dest: '' } // Copy _redirects to dist/
+      ]
+    })
+  ],
+  base: './', // Important for Render static site
 });
