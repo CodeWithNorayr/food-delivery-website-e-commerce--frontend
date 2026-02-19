@@ -98,9 +98,6 @@ const MyOrders = () => {
 
           {/* ✅ Order Info Section */}
           <div className="order-info">
-            <p className="order-info-status">
-              <strong>Status:</strong> {order.status}
-            </p>
             <p className="order-info-total-amount">
               <strong>Total Amount:</strong> {order.amount}
             </p>
