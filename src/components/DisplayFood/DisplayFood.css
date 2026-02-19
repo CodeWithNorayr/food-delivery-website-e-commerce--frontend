@@ -50,7 +50,7 @@
 /* Small tablets / large mobile */
 @media (max-width: 768px) {
   .display-food {
-    grid-template-columns: repeat(1, 1fr); /* 1 column */
+    grid-template-columns: 1fr; /* 1 column */
     padding: 15px;
     gap: 15px;
   }
@@ -61,14 +61,12 @@
   }
 }
 
-/* Mobile portrait with horizontal scroll */
+/* Mobile portrait */
 @media (max-width: 480px) {
   .display-food {
-    display: flex;            /* switch to flex for horizontal scroll */
-    flex-wrap: nowrap;        /* prevent wrapping */
-    overflow-x: auto;         /* enable horizontal scroll */
-    scroll-behavior: smooth;  /* smooth scroll */
-    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+    display: flex;
+    flex-direction: column;  /* stack items vertically */
+    align-items: center;
     gap: 10px;
     padding: 0 10px;
   }
@@ -76,6 +74,5 @@
   .display-food img {
     height: 140px;
     width: 140px;
-    flex: 0 0 auto; /* keep images fixed size and prevent shrinking */
   }
 }
